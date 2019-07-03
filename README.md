@@ -1,2 +1,2 @@
-# SimpleAccountGenerator
-Simple account generator, generates nicks and passwords from PlayerLoggerPlus plugin directory
+# ProstyGeneratorKont
+Prosty generator kont, generuje nazwy i hasła z folderu pluginu "PlayerLoggerPlus"
