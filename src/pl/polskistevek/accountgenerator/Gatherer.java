@@ -10,11 +10,14 @@ public class Gatherer {
     public static int all;
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Nickname and Password gatherer!");
+        //System.out.println("Welcome to Nickname and Password gatherer!");
+        System.out.println("Witaj w zbieraczy Nazw i Haseł!");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Select directory with player files [Example: User]: ");
+        //System.out.println("Select directory with player files [Example: User]: ");
+        System.out.println("Wybierz folder z plikami graczy [Przykład: Użytkownik]: ");
         String input = scanner.nextLine();
-        System.out.println("Starting gathering passwords and nicks...");
+        //System.out.println("Starting gathering passwords and nicks...");
+        System.out.println("Zaczęto zbieranie haseł i nicków...");
         long time = System.currentTimeMillis();
         File path = new File(input + "/");
         File[] files = path.listFiles();
@@ -22,14 +25,14 @@ public class Gatherer {
         PrintWriter zapis1 = null;
         PrintWriter zapis2 = null;
         try {
-            zapis = new PrintWriter("passwords.txt");
-            zapis1 = new PrintWriter("nicks.txt");
-            zapis2 = new PrintWriter("accounts.txt");
+            zapis = new PrintWriter("hasła.txt"); //!
+            zapis1 = new PrintWriter("nazwy.txt"); //!
+            zapis2 = new PrintWriter("konta.txt"); //!
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         all = files.length;
-        System.out.println("Found " + all + " files. Started...");
+        System.out.println("Znaleziono " + all + " plików. Zaczęto..."); //!
         for (File value : files) {
             if (value.isFile()) {
                 String file = value.toString();
@@ -40,7 +43,7 @@ public class Gatherer {
                     String[] haslo = tekst.split(" ");
                     number++;
                     if (number%500 == 0){
-                        System.out.println("Progress: " + number);
+                        System.out.println("Postęp: " + number); //!
                     }
                     try {
                         String out = haslo[3];
@@ -60,7 +63,7 @@ public class Gatherer {
         zapis1.close();
         zapis2.close();
         long time2 = System.currentTimeMillis() - time;
-        System.out.println("Number of generated accounts: " + number);
-        System.out.println("Completed in " + time2 + "ms");
+        System.out.println("Liczba wygenerowanych kont: " + number); //!
+        System.out.println("Zkończono w " + time2 + "ms"); //!
     }
 }
