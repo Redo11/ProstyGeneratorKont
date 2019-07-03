@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Dictionary-BruteForce:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Dictionary_BruteForce_jar</output-path>
+    <root id="archive" name="Dictionary-BruteForce.jar">
+      <element id="module-output" name="Dictionary-BruteForce" />
+    </root>
+  </artifact>
+</component>
